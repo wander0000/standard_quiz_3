@@ -1,4 +1,4 @@
-package com.sparta.jpaquiz.application.dtos;
+package com.sparta.jpaquiz.application.dtos.post;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

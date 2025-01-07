@@ -1,6 +1,6 @@
-package com.sparta.jpaquiz.application.service;
+package com.sparta.jpaquiz.application.service.user;
 
-import com.sparta.jpaquiz.application.dtos.UserRequestDto;
+import com.sparta.jpaquiz.application.dtos.user.UserResponseDto;
 import com.sparta.jpaquiz.domain.entity.User;
 import com.sparta.jpaquiz.domain.repository.UserRepository;
 import org.springframework.stereotype.Service;
@@ -14,6 +14,6 @@ public class UserCommandService {
     }
 
 
-    public User addUser(UserRequestDto request) {
+    public User addUser(UserResponseDto request) {
     }
 }
