@@ -15,5 +15,13 @@ public class UserCommandService {
 
 
     public User addUser(UserResponseDto request) {
+        return userRepository.save(User.create(
+            request.getName(),
+            request.getUsername(),
+            request.getEmail(),
+            request.getAddress().getStreet() + ' ' + request.getAddress().getSuite(),
+            request.getAddress().getZipcode(),
+            request.getPhone()
+        ));
     }
 }

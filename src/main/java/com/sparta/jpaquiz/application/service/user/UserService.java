@@ -22,7 +22,8 @@ public class UserService {
      * @param userId
      */
     public UserDto createUser(Long userId) {
-        // ...
+        UserResponseDto response = userQueryService.getUser(userId);
+        User user = userCommandService.addUser(response);
         return UserDto.from(user);
     }
 }
