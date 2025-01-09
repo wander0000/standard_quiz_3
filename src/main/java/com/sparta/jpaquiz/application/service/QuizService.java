@@ -3,9 +3,11 @@ package com.sparta.jpaquiz.application.service;
 import com.sparta.jpaquiz.application.dtos.post.PostRequestDto;
 import com.sparta.jpaquiz.application.dtos.post.PostResponseDto;
 import com.sparta.jpaquiz.application.dtos.user.UserDto;
+import com.sparta.jpaquiz.application.dtos.user.UserResponseDto;
 import com.sparta.jpaquiz.application.service.post.PostService;
 import com.sparta.jpaquiz.application.service.user.UserService;
 import org.springframework.stereotype.Service;
+import org.springframework.web.util.UriComponentsBuilder;
 
 @Service
 public class QuizService {
@@ -23,6 +25,7 @@ public class QuizService {
      * @return {@link UserDto} 유저 정보 응답 객체
      */
     public UserDto createUser(Long userId) {
+        return userService.createUser(userId);
     }
 
     /**
@@ -31,5 +34,6 @@ public class QuizService {
      * @return {@link PostResponseDto} 게시글 작성 응답 객체
      */
     public PostResponseDto addPost(PostRequestDto request) {
+        return postService.addPost(request);
     }
 }

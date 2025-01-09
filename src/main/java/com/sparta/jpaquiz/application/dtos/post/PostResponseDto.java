@@ -8,4 +8,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PostResponseDto {
+	private String id;
+	private String userId;
+	private String title;
+	private String body;
 }
